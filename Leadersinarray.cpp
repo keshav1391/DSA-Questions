@@ -32,7 +32,7 @@ vector<int> superiorLeaders(vector<int>& arr){
     int maxi =  INT_MIN;
     // Traverse the array from right to left
     //O(n) time complexity
-    for(int i = n-1;i>=00;i--){
+    for(int i = n-1;i>=0;i--){
         if(arr[i]>maxi){
             ans.push_back(arr[i]);
         }

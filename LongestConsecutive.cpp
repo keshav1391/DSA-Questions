@@ -1,0 +1,22 @@
+// finding Longest Consecutive by better solution
+#include <bits/stdc++.h>
+using namespace std;
+int largestSuccessiveElements(vector<int>&nums){
+    sort(nums.begin(),nums.end());
+    int n= nums.size();
+    int lastSmaller = INT_MIN;
+    int cnt = 0;
+    int longest = 1;
+    for(int i =0;i<n;i++){
+        if(nums[i]-1 == lastSmaller){
+            cnt += 1;
+            lastSmaller = nums[i];
+        }
+        else if(lastSmaller != nums[i]){
+            cnt = 1;
+            lastSmaller = nums[i];
+        }
+        longest = max(longest, cnt);
+    }
+    return longest;
+}
