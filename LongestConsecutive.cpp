@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int largestSuccessiveElements(vector<int>&nums){
+    if(nums.empty()) return 0;
     sort(nums.begin(),nums.end());
     int n= nums.size();
     int lastSmaller = INT_MIN;
@@ -20,3 +21,4 @@ int largestSuccessiveElements(vector<int>&nums){
     }
     return longest;
 }
+//
